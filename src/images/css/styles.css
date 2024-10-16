@@ -33,6 +33,13 @@
     cursor: pointer;
 }
 
+.wizard {
+    position: absolute;
+    background-image: url(/WizardGame/src/images/wizard.png);
+    background-size: cover;
+    z-index: 10;
+}
+
 .hidden {
     display: none;
 }
