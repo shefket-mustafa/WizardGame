@@ -1,8 +1,13 @@
-    let state = initState();
-    let game = initGameObjects()
+let state = initState();
+let game = initGameObjects()
 
 game.startScreen.addEventListener('click',(e)=>{
+   
+
    game.startScreen.classList.add('hidden')
     game.gameScreen.classList.remove('hidden');
+
+    //starting the game
+    start(state,game);
     
 })
