@@ -1,0 +1,29 @@
+    body{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+.game {
+    background-color: rgb(57, 191, 235);
+    width: 100vw;
+    height: 100vw;
+
+}
+
+.start-screen {
+    text-align: center;
+    padding: 30px;
+    font-size: 48px;
+    width: 500px;
+    background-color: lightgreen;
+    margin: auto ;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+}
+
+.start-screen:hover {
+    background-color: green;
+    cursor: pointer;
+}
