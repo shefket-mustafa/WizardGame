@@ -1,13 +1,30 @@
 let state = initState();
-let game = initGameObjects()
+let game = initGameObject();
 
-game.startScreen.addEventListener('click',(e)=>{
-   
+const availableKeys = [
+    'KeyA',
+    'KeyS',
+    'KeyD',
+    'KeyW',
+    'Space',
+];
 
-   game.startScreen.classList.add('hidden')
+document.addEventListener('keydown', (e) => {
+    if (availableKeys.includes(e.code)) {
+        state.keys[e.code] = true;
+    }
+});
+
+document.addEventListener('keyup', (e) => {
+    if (availableKeys.includes(e.code)) {
+        state.keys[e.code] = false;
+    }
+});
+
+game.startScreen.addEventListener('click', (e) => {
+    game.startScreen.classList.add('hidden');
     game.gameScreen.classList.remove('hidden');
 
-    //starting the game
-    start(state,game);
-    
-})
+    // Start game
+    start(state, game);
+});
